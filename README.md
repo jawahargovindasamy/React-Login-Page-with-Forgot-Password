@@ -4,7 +4,7 @@ A React-based web application that provides user authentication features, includ
 
 ## Table of Contents
 
-- [Features](#features)
+- [Features](#🚀 Features)
 - [Getting Started](#getting-started)
 - [Installation](#installation)
 - [Usage](#usage)
