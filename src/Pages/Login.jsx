@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { toast } from "react-toastify";
-import "react-toastify/ReactToastify.css";
+import "react-toastify/ReactToastify.css"
 import axios from "axios";
 
 const Login = ({ setToken }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const navigate = useNavigate();
+  const navigate=useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,10 +21,7 @@ const Login = ({ setToken }) => {
     const userData = { email, password };
 
     try {
-      const response = await axios.post(
-        "https://node-login-application-with-forgot.onrender.com/api/auth/login",
-        userData
-      );
+      const response = await axios.post("https://node-login-application-with-forgot.onrender.com/api/auth/login", userData);
       console.log("Login successful:", response.data);
       toast.success(response.data.message || "Login successful");
       setToken(response.data.token);
@@ -49,18 +46,12 @@ const Login = ({ setToken }) => {
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
 
       <div className="relative z-10 w-full max-w-md bg-white/70 backdrop-blur-lg rounded-2xl shadow-2xl p-8 space-y-6">
-        <h2 className="text-3xl font-bold text-center text-gray-800">
-          Welcome Back 👋
-        </h2>
-        <p className="text-gray-600 text-center text-sm">
-          Please login to your account
-        </p>
+        <h2 className="text-3xl font-bold text-center text-gray-800">Welcome Back 👋</h2>
+        <p className="text-gray-600 text-center text-sm">Please login to your account</p>
 
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Email Address
-            </label>
+            <label className="block text-sm font-medium text-gray-700">Email Address</label>
             <input
               type="email"
               placeholder="you@example.com"
@@ -71,9 +62,7 @@ const Login = ({ setToken }) => {
           </div>
 
           <div className="relative">
-            <label className="block text-sm font-medium text-gray-700">
-              Password
-            </label>
+            <label className="block text-sm font-medium text-gray-700">Password</label>
             <input
               type={showPassword ? "text" : "password"}
               placeholder="Enter your password"

@@ -49,18 +49,12 @@ const Register = () => {
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
 
       <div className="relative z-10 w-full max-w-md bg-white/70 backdrop-blur-lg rounded-2xl shadow-2xl p-8 space-y-6">
-        <h2 className="text-3xl font-bold text-center text-gray-800">
-          Create Your Account
-        </h2>
-        <p className="text-gray-600 text-center text-sm">
-          Join us and start your journey!
-        </p>
+        <h2 className="text-3xl font-bold text-center text-gray-800">Create Your Account</h2>
+        <p className="text-gray-600 text-center text-sm">Join us and start your journey!</p>
 
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Name
-            </label>
+            <label className="block text-sm font-medium text-gray-700">Name</label>
             <input
               type="text"
               placeholder="John Doe"
@@ -71,9 +65,7 @@ const Register = () => {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700">
-              Email Address
-            </label>
+            <label className="block text-sm font-medium text-gray-700">Email Address</label>
             <input
               type="email"
               placeholder="you@example.com"
@@ -84,9 +76,7 @@ const Register = () => {
           </div>
 
           <div className="relative">
-            <label className="block text-sm font-medium text-gray-700">
-              Password
-            </label>
+            <label className="block text-sm font-medium text-gray-700">Password</label>
             <input
               type={showPassword ? "text" : "password"}
               placeholder="Create a password"
